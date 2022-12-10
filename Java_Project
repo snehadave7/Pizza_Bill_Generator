@@ -7,10 +7,10 @@ import java.util.*;
 class pizza {
     public pizza(){
         System.out.println("Welcome to MyPizza Store");
-        System.out.println("We have a list of various veg and nonVeg pizzas");
+        System.out.println("We have a list of various Veg and NonVeg Pizzas");
     }
     Scanner sc= new Scanner(System.in);
-    private int price;
+
     private int extraCheesePrice = 50;
     private int extraToppingPrice = 150;
     private int TomatoPrice=50;
@@ -40,41 +40,41 @@ class pizza {
         int p=sc.nextInt();
        switch (p){
            case 1:
-               System.out.println("You have opted for Veg pizza "+ "300");
+               System.out.println("You have opted for Veg Pizza whose price is  "+ "$300");
                basePizzaPrice+=300;
                isVegPizza=true;
                break;
            case 2:
-               System.out.println("You have opted for NonVeg pizza "+ "400");
+               System.out.println("You have opted for NonVeg Pizza whose price is "+ "$400");
                basePizzaPrice+=400;
                isNonVegPizza=true;
                break;
        }
     }
     public void pizzaSize(){
-        System.out.println("Which size of pizza do you want?");
-        System.out.println("Press 1 for small pizza 2 for medium pizza and 3 for large pizza");
+        System.out.println("Which size of Pizza do you want?");
+        System.out.println("Press 1 for Small Pizza, 2 for Medium Pizza, and 3 for Large Pizza");
         int s=sc.nextInt();
         switch (s){
             case 1:
-                System.out.println("You have chosen small pizza "+ "100");
+                System.out.println("You have chosen Small Pizza whose price is "+ "$100");
                 basePizzaPrice+=100;
                 isSmall=true;
                 break;
             case 2:
-                System.out.println("You have chosen medium pizza "+ "150");
+                System.out.println("You have chosen Medium Pizza whose price is "+ "$150");
                 basePizzaPrice+=150;
                 isMedium=true;
                 break;
             case 3:
-                System.out.println("You have chosen large pizza "+ "200");
+                System.out.println("You have chosen Large Pizza whose price is "+ "$200");
                 basePizzaPrice+=200;
                 isLarge=true;
                 break;
         }
     }
     public void addExtraCheese() {
-        System.out.println("You have ordered for extra cheese in your pizza "+ extraCheesePrice);
+        System.out.println("You have ordered for Extra Cheese in your Pizza whose price is $"+ extraCheesePrice);
         basePizzaPrice+=extraCheesePrice;
         isExtraCheeseAdded=true;
     }
@@ -84,27 +84,27 @@ class pizza {
         int ToppingNo=sc.nextInt();
         switch(ToppingNo){
             case 1:
-                System.out.println("You added tomato "+ TomatoPrice);
+                System.out.println("You added tomato whose price is $"+ TomatoPrice);
                 basePizzaPrice+=TomatoPrice;
                 isTomatoToppingAdded=true;
                 break;
             case 2:
-                System.out.println("You added onion "+ OnionPrice);
+                System.out.println("You added onion whose price is $"+ OnionPrice);
                 basePizzaPrice+=OnionPrice;
                 isOnionToppingAdded=true;
                 break;
             case 3:
-                System.out.println("You added paneer "+ PaneerPrice);
+                System.out.println("You added paneer whose price is $"+ PaneerPrice);
                 basePizzaPrice+=PaneerPrice;
                 isPaneerToppingAdded=true;
                 break;
             case 4:
-                System.out.println("You added corn "+ CornPrice);
+                System.out.println("You added corn whose price is $"+ CornPrice);
                 basePizzaPrice+=CornPrice;
                 isCornToppingAdded=true;
                 break;
             case 5:
-                System.out.println("You added all toppings "+ extraToppingPrice);
+                System.out.println("You added all toppings whose price is $"+ extraToppingPrice);
                 basePizzaPrice+=extraToppingPrice;
                 isAllToppingAdded=true;
                 break;
@@ -118,12 +118,12 @@ class pizza {
         int m=sc.nextInt();
         switch (m){
             case 1:
-                System.out.println("you have opted for take away "+ "20");
+                System.out.println("you have opted for TakeAway whose price is $"+ "20");
                 basePizzaPrice+=backPack;
                 isOptedForTakeAway=true;
                 break;
             case 2:
-                System.out.println("you have opted for home deliver "+"50");
+                System.out.println("you have opted for HomeDeliver whose price is $"+"50");
                 basePizzaPrice+=50;
                 isHomeDelivery=true;
                 break;
@@ -132,48 +132,48 @@ class pizza {
 
     public void getBill() {
         String bill="";
-        System.out.println(" Total Pizza Price is: "+basePizzaPrice);
+        System.out.println(" Total Pizza Price is: $"+basePizzaPrice);
         if(isVegPizza){
-            bill+="Veg Pizza taken: 300"+ "\n";
+            bill+="Veg Pizza taken: $300"+ "\n";
         }
         if(isNonVegPizza){
-            bill+="NonVeg Pizza taken: 400"+ "\n";
+            bill+="NonVeg Pizza taken: $400"+ "\n";
         }
         if(isSmall){
-            bill+="Small Pizza taken: 100" +"\n";
+            bill+="Small Pizza taken: $100" +"\n";
         }
         if(isMedium){
-            bill+="Medium Pizza taken: 150" +"\n";
+            bill+="Medium Pizza taken: $150" +"\n";
         }
         if(isLarge){
-            bill+="Large Pizza taken: 200" +"\n";
+            bill+="Large Pizza taken: $200" +"\n";
         }
         if(isExtraCheeseAdded){
-            bill+="Extra cheese added: "+extraCheesePrice+ "\n";
+            bill+="Extra cheese added: $"+extraCheesePrice+ "\n";
         }
         if(isTomatoToppingAdded){
-            bill+="Tomato toppings added: "+TomatoPrice+ "\n";
+            bill+="Tomato toppings added: $"+TomatoPrice+ "\n";
         }
         if(isOnionToppingAdded) {
-            bill += "Onion toppings added: " + OnionPrice + "\n";
+            bill += "Onion toppings added: $" + OnionPrice + "\n";
         }
         if(isPaneerToppingAdded){
-            bill+="Paneer toppings added: "+PaneerPrice+ "\n";
+            bill+="Paneer toppings added: $"+PaneerPrice+ "\n";
         }
         if(isCornToppingAdded){
-            bill+="Corn toppings added: "+CornPrice+ "\n";
+            bill+="Corn toppings added: $"+CornPrice+ "\n";
         }
         if(isAllToppingAdded){
-            bill+="All toppings added: "+extraToppingPrice+ "\n";
+            bill+="All toppings added: $"+extraToppingPrice+ "\n";
         }
         if(isOptedForTakeAway){
-            bill+="Take away: "+backPack+ "\n";
+            bill+="Take away: $"+backPack+ "\n";
         }
         if(isHomeDelivery){
-            bill+="Home Delivery: 50"+ "\n";
+            bill+="Home Delivery: $50"+ "\n";
         }
 
-        bill+="Bill: "+basePizzaPrice + "\n";
+        bill+="Bill: $"+basePizzaPrice + "\n";
         System.out.println(bill);
     }
 }
@@ -183,8 +183,7 @@ class pizza {
            pizza pz=new pizza();
            pz.pizzaType();
            pz.pizzaSize();
-            System.out.println("If you need any extra things to be added to your pizza then");
-            System.out.println("Do you want cheese?");
+            System.out.println("Do you want extra cheese to be added to your Pizza?");
             boolean ch=sc.nextBoolean();
             if(ch){
                pz.addExtraCheese();
@@ -192,7 +191,8 @@ class pizza {
             else{
                 System.out.println("Cheese not added");
             }
-            System.out.println("Do you want Extra-toppings?");
+
+            System.out.println("Do you wish to have extra toppings to your Pizza?");
             boolean tt=sc.nextBoolean();
             if(tt){
                 pz.addExtraToppings();
@@ -200,14 +200,8 @@ class pizza {
             else{
                 System.out.println("No toppings added");
             }
-            System.out.println("Do you want delivery? : true or false");
-            boolean dd=sc.nextBoolean();
-            if(dd){
+
                 pz.MediumOfDeliver();
-            }
-            else{
-                System.out.println("Nothing chosen...");
-            }
 
             System.out.println("Final bill generated is: ");
             pz.getBill();
